@@ -1,9 +1,9 @@
-axiom 0.1
+axiom 0.2
 module abs
-input x i64
-output result i64
-domain x -16 16
+input x int
+output result int
+domain x unbounded
 requires true
-ensures result >= 0
-ensures result == x || result == -x
+ensures nonnegative: result >= 0
+ensures magnitude: result == x || result == -x
 objective instructions min

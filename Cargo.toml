@@ -1,8 +1,8 @@
 [package]
 name = "axiom-spec"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2021"
-description = "Axiom intent/specification DSL compiler"
+description = "Axiom 0.2 intent/specification DSL compiler"
 license = "MIT"
 publish = false
 

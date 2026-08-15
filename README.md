@@ -1,29 +1,18 @@
-# axiom-spec
+# axiom-spec v0.2.0
 
-The front door of Axiom: a deliberately small intent/specification language that compiles human-editable contracts into
-deterministic `AXIOM-IR/1`.
-
-> **Maturity:** research prototype v0.1. The default verifier proves properties by exhaustive evaluation over an
-> explicitly finite input domain. A VALID receipt is therefore a theorem about that bounded model, not a claim of
-> unbounded program correctness.
-
-## Example
+Compiler for the Axiom 0.2 intent/specification language. The v0.2 DSL introduces named proof obligations and unbounded
+integer domains.
 
 ```text
-axiom 0.1
+axiom 0.2
 module abs
-input x i64
-output result i64
-domain x -16 16
+input x int
+output result int
+domain x unbounded
 requires true
-ensures result >= 0
-ensures result == x || result == -x
+ensures nonnegative: result >= 0
+ensures magnitude: result == x || result == -x
 objective instructions min
 ```
 
-```bash
-cargo run -- compile examples/abs.ax --out abs.aix
-```
-
-The compiler canonicalizes whitespace and ordering so downstream components can hash the same logical artifact
-reproducibly.
+Output is the canonical interchange format `AXIOM-IR/2`.
