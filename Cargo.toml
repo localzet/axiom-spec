@@ -1,0 +1,11 @@
+[package]
+name = "axiom-spec"
+version = "0.1.0"
+edition = "2021"
+description = "Axiom intent/specification DSL compiler"
+license = "MIT"
+publish = false
+
+[dependencies]
+anyhow = "1"
+

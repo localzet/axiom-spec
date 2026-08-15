@@ -1,0 +1,9 @@
+axiom 0.1
+module abs
+input x i64
+output result i64
+domain x -16 16
+requires true
+ensures result >= 0
+ensures result == x || result == -x
+objective instructions min
