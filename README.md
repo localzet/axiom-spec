@@ -1,7 +1,7 @@
 # axiom-spec v0.2.0
 
-Compiler for the Axiom 0.2 intent/specification language. The v0.2 DSL introduces named proof obligations and unbounded
-integer domains.
+Компилятор языка намерений/спецификаций Axiom 0.2. В DSL v0.2 появились именованные proof obligations и неограниченные
+целочисленные области.
 
 ```text
 axiom 0.2
@@ -15,4 +15,8 @@ ensures magnitude: result == x || result == -x
 objective instructions min
 ```
 
-Output is the canonical interchange format `AXIOM-IR/2`.
+Выходной формат — канонический interchange `AXIOM-IR/2`.
+
+## Связанные исследования
+
+Этот компонент входит в исследовательский проект [Axiom](https://github.com/localzet/axiom-stack). Все компоненты собраны по теме [localzet-axiom](https://github.com/topics/localzet-axiom). Основной язык документации — русский. Исследовательские результаты и ограничения не означают готовность к промышленному применению.
